@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Great+Vibes&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Bad Script", cursive;
+  /* background-color: #bfd5ec; */
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* Увеличиваем размер */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse-animation {
+  animation: pulse 1s infinite; /* Настройка продолжительности и бесконечности */
+}
