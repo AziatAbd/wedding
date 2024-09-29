@@ -10,7 +10,7 @@ const MainPage = () => {
   return (
     <div>
       <Header />
-      <div className="px-3">
+      <div className="mb-20 px-3">
         <Happines />
         <Dear />
         <Map />
