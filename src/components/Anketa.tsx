@@ -1,8 +1,17 @@
-import { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 
 const Anketa = () => {
   const [fullName, setFullName] = useState("");
   const [yesNo, setYesNo] = useState("");
+  const [status, setStatus] = useState(false);
+
+  useEffect(() => {
+    const data = localStorage.getItem("status");
+    if (data) {
+      const parsedData = JSON.parse(data);
+      setStatus(parsedData);
+    }
+  }, []);
 
   const changeName = (e: ChangeEvent<HTMLInputElement>) => {
     setFullName(e.target.value);
@@ -27,8 +36,13 @@ const Anketa = () => {
         },
       });
 
+      localStorage.setItem("status", JSON.stringify(true));
+
       if (response.ok) {
         alert("Данные успешно отправлены!");
+        setFullName("");
+        setYesNo("");
+        setStatus(true);
       } else {
         alert("Произошла ошибка при отправке данных.");
       }
@@ -52,6 +66,7 @@ const Anketa = () => {
           className="w-full rounded-xl border border-[#bfd5ec] p-2 text-xl outline-[#bfd5ec]"
           value={fullName}
           onChange={changeName}
+          disabled={status}
         />
       </div>
 
@@ -68,6 +83,7 @@ const Anketa = () => {
             checked={yesNo === "yes"}
             onChange={changeYesNo}
             required
+            disabled={status}
           />
           <label htmlFor="yes" className="ml-3">
             Я с удовольствием приду
@@ -83,6 +99,7 @@ const Anketa = () => {
             checked={yesNo === "no"}
             onChange={changeYesNo}
             required
+            disabled={status}
           />
           <label htmlFor="no" className="ml-3">
             К сожалению, не смогу присутствовать
@@ -91,12 +108,21 @@ const Anketa = () => {
       </div>
 
       <div className="mx-auto w-fit">
-        <button
-          type="submit"
-          className="rounded-3xl border bg-[#bfd5ec] px-10 py-4 text-xl"
-        >
-          Отправить
-        </button>
+        {status ? (
+          <button
+            className="rounded-3xl border bg-[#bfefd4] px-10 py-4 text-xl"
+            disabled
+          >
+            Отправлено
+          </button>
+        ) : (
+          <button
+            type="submit"
+            className="rounded-3xl border bg-[#bfecda] px-10 py-4 text-xl"
+          >
+            Отправить
+          </button>
+        )}
       </div>
     </form>
   );
