@@ -118,7 +118,7 @@ const Anketa = () => {
         ) : (
           <button
             type="submit"
-            className="rounded-3xl border bg-[#bfecda] px-10 py-4 text-xl"
+            className="rounded-3xl border bg-[#bfd5ec] px-10 py-4 text-xl"
           >
             Отправить
           </button>
