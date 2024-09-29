@@ -55,7 +55,7 @@ const Anketa = () => {
   return (
     <form className="mx-auto w-full" onSubmit={submitHandler}>
       <div className="mb-10 flex flex-col gap-2">
-        <label htmlFor="fullName" className="text-xl">
+        <label htmlFor="fullName" className="text-3xl">
           Напишите, пожалуйста, Ваши ФИО
         </label>
         <input
@@ -63,7 +63,7 @@ const Anketa = () => {
           id="fullName"
           placeholder="Ваши ФИО"
           required
-          className="w-full rounded-xl border border-[#bfd5ec] p-2 text-xl outline-[#bfd5ec]"
+          className="w-full rounded-xl border border-[#bfd5ec] p-3 text-3xl outline-[#bfd5ec]"
           value={fullName}
           onChange={changeName}
           disabled={status}
@@ -71,7 +71,7 @@ const Anketa = () => {
       </div>
 
       <div>
-        <p className="mb-3 text-xl">
+        <p className="mb-3 text-3xl">
           Сможете ли присутствовать на нашем торжестве?
         </p>
         <div className="mb-4">
@@ -84,8 +84,9 @@ const Anketa = () => {
             onChange={changeYesNo}
             required
             disabled={status}
+            className="h-5 w-5"
           />
-          <label htmlFor="yes" className="ml-3">
+          <label htmlFor="yes" className="ml-3 text-3xl">
             Я с удовольствием приду
           </label>
         </div>
@@ -100,8 +101,9 @@ const Anketa = () => {
             onChange={changeYesNo}
             required
             disabled={status}
+            className="h-5 w-5"
           />
-          <label htmlFor="no" className="ml-3">
+          <label htmlFor="no" className="ml-3 text-3xl">
             К сожалению, не смогу присутствовать
           </label>
         </div>
@@ -110,7 +112,7 @@ const Anketa = () => {
       <div className="mx-auto w-fit">
         {status ? (
           <button
-            className="rounded-3xl border bg-[#bfefd4] px-10 py-4 text-xl"
+            className="rounded-3xl border bg-[#bfefd4] px-10 py-4 text-3xl font-bold"
             disabled
           >
             Отправлено
@@ -118,7 +120,7 @@ const Anketa = () => {
         ) : (
           <button
             type="submit"
-            className="rounded-3xl border bg-[#bfd5ec] px-10 py-4 text-xl"
+            className="rounded-3xl border bg-[#bfd5ec] px-10 py-4 text-3xl font-bold"
           >
             Отправить
           </button>

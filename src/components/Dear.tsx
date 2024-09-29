@@ -9,14 +9,14 @@ const Dear = () => {
     <div>
       <AnimatedText
         delay={0.2}
-        className="mx-auto mb-10 w-1/2 text-center text-4xl"
+        className="mx-auto mb-10 w-1/2 text-center text-5xl"
       >
         Дорогие и любимые!
       </AnimatedText>
 
       <div>{/* Music */}</div>
 
-      <AnimatedText delay={0.4} className="text-center text-xl">
+      <AnimatedText delay={0.4} className="text-center text-3xl">
         Один день в этом году будет для нас особенным, и мы хотим провести его в
         кругу близких и друзей. С большим удовольствием приглашаем вас на
         знаменательный праздник - нашу свадьбу!

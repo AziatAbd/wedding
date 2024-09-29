@@ -43,8 +43,8 @@ const Timer = () => {
 
   return (
     <div className="mt-8 flex flex-col items-center justify-center">
-      <h1 className="text-4xl font-bold">Разделите с нами</h1>
-      <h2 className="mb-4 text-2xl italic text-gray-400">
+      <h1 className="text-5xl font-bold">Разделите с нами</h1>
+      <h2 className="mb-4 text-4xl italic text-gray-400">
         <span className="text-red-600">любовь</span> через...
       </h2>
 
@@ -54,19 +54,19 @@ const Timer = () => {
           <>
             <div className="flex flex-col items-center">
               <span className="text-4xl font-bold">{timeLeft.days}</span>
-              <span className="text-lg">дней</span>
+              <span className="text-3xl">дней</span>
             </div>
             <div className="flex flex-col items-center">
               <span className="text-4xl font-bold">{timeLeft.hours}</span>
-              <span className="text-lg">часов</span>
+              <span className="text-3xl">часов</span>
             </div>
             <div className="flex flex-col items-center">
               <span className="text-4xl font-bold">{timeLeft.minutes}</span>
-              <span className="text-lg">минут</span>
+              <span className="text-3xl">минут</span>
             </div>
             <div className="flex flex-col items-center">
               <span className="text-4xl font-bold">{timeLeft.seconds}</span>
-              <span className="text-lg">секунд</span>
+              <span className="text-3xl">секунд</span>
             </div>
           </>
         ) : (

@@ -3,8 +3,8 @@ import { FaTelegram, FaWhatsapp } from "react-icons/fa";
 const Contacts = () => {
   return (
     <div className="mx-auto mb-20 w-full">
-      <h1 className="mb-5 text-center text-4xl">Контакты</h1>
-      <p className="mb-3 text-center text-xl">
+      <h1 className="mb-5 text-center text-5xl">Контакты</h1>
+      <p className="mb-3 text-center text-3xl">
         Номер: (+996) 505 005 004 (Улан)
       </p>
       <div className="flex justify-center gap-4">

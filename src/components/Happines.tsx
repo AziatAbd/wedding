@@ -9,12 +9,12 @@ const Happines = () => {
     <div>
       <AnimatedText
         delay={0.2}
-        className="mx-auto my-10 w-3/4 text-center text-xl"
+        className="mx-auto my-10 w-3/4 text-center text-3xl"
       >
         Я так счастлив, просто потому, что я встретил тебя
       </AnimatedText>
 
-      <AnimatedText delay={0.4} className="mb-10 text-center text-4xl">
+      <AnimatedText delay={0.4} className="mb-10 text-center text-5xl">
         Моё счастье...
       </AnimatedText>
 
