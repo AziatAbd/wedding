@@ -22,7 +22,7 @@ const Dear = () => {
         знаменательный праздник - нашу свадьбу!
       </AnimatedText>
 
-      <div className="mt-8 flex flex-col items-center">
+      <div className="relative mt-8 flex flex-col items-center">
         <AnimatedText delay={0.6} className="mb-4 text-4xl font-bold">
           Октябрь
         </AnimatedText>
@@ -79,7 +79,7 @@ const Dear = () => {
         <img
           src={heart}
           alt="heart"
-          className="pulse-animation absolute -bottom-[442px] h-10 w-10"
+          className="pulse-animation absolute bottom-7 h-10 w-10"
         />
       </div>
 
