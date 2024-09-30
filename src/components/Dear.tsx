@@ -3,18 +3,47 @@ import iskra from "../assets/iskra.png";
 import AnimatedText from "./UI/AnimatedText";
 import AnimatedImage from "./UI/AnimatedImage";
 import heart from "../assets/heart.svg";
+import soundIcon from "../assets/sound.png";
+import mot from "../assets/MOT.mp3";
+import useSound from "use-sound";
+import { useState } from "react";
 
 const Dear = () => {
+  const [play, { pause }] = useSound(mot);
+
+  const [isPlay, setIsPlay] = useState(false);
+
+  const handlePlay = () => {
+    play();
+    setIsPlay(true);
+  };
+
+  const handleStop = () => {
+    pause();
+    setIsPlay(false);
+  };
+
   return (
     <div>
       <AnimatedText
         delay={0.2}
-        className="mx-auto mb-10 text-center text-5xl font-semibold"
+        className="mx-auto mb-4 text-center text-5xl font-semibold"
       >
         Дорогие и любимые!
       </AnimatedText>
 
-      <div>{/* Music */}</div>
+      <div
+        onClick={isPlay ? handleStop : handlePlay}
+        className="relative mx-auto mb-4 flex w-fit cursor-pointer flex-col items-center"
+      >
+        {isPlay ? (
+          <div className="absolute bottom-[60%] z-10 w-14 rotate-45 border-t-4 border-t-red-500"></div>
+        ) : null}
+        <img src={soundIcon} alt="icon" className="w-14" />
+        <span className="text-center">
+          Если Вас отвлекает музыка, ее можно выключить
+        </span>
+      </div>
 
       <AnimatedText delay={0.4} className="text-center text-3xl">
         Один день в этом году будет для нас особенным, и мы хотим провести его в
