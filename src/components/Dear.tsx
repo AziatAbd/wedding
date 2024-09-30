@@ -36,7 +36,7 @@ const Dear = () => {
         onClick={isPlay ? handleStop : handlePlay}
         className="relative mx-auto mb-4 flex w-fit cursor-pointer flex-col items-center"
       >
-        {isPlay ? (
+        {!isPlay ? (
           <div className="absolute bottom-[60%] z-10 w-14 rotate-45 border-t-4 border-t-red-500"></div>
         ) : null}
         <img src={soundIcon} alt="icon" className="w-14" />
