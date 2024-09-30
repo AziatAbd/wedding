@@ -13,9 +13,9 @@ const Anketa = () => {
     }
   }, []);
 
-  const changeName = (e: ChangeEvent<HTMLInputElement>) => {
-    setFullName(e.target.value);
-  };
+  // const changeName = (e: ChangeEvent<HTMLInputElement>) => {
+  //   setFullName(e.target.value);
+  // };
 
   const changeYesNo = (e: ChangeEvent<HTMLInputElement>) => {
     setYesNo(e.target.value);
@@ -55,10 +55,10 @@ const Anketa = () => {
   return (
     <form className="mx-auto w-full" onSubmit={submitHandler}>
       <div className="mb-10 flex flex-col gap-2">
-        <label htmlFor="fullName" className="text-3xl">
-          Напишите, пожалуйста, Ваши ФИО
+        <label htmlFor="fullName" className="text-3xl mx-auto">
+          Уважаемый (ая)
         </label>
-        <input
+        {/* <input
           type="text"
           id="fullName"
           placeholder="Ваши ФИО"
@@ -67,7 +67,9 @@ const Anketa = () => {
           value={fullName}
           onChange={changeName}
           disabled={status}
-        />
+        /> */}
+
+        <h1 className="text-6xl mx-auto mt-3 font-['Open_Sans']">Rabiya</h1>
       </div>
 
       <div>
