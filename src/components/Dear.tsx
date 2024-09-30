@@ -9,7 +9,7 @@ const Dear = () => {
     <div>
       <AnimatedText
         delay={0.2}
-        className="mx-auto mb-10 w-1/2 text-center text-5xl"
+        className="mx-auto mb-10 text-center text-5xl font-semibold"
       >
         Дорогие и любимые!
       </AnimatedText>

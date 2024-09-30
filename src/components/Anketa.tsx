@@ -1,9 +1,15 @@
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
+import AnimatedText from "./UI/AnimatedText";
+import Spinner from "./UI/Spinner";
 
 const Anketa = () => {
-  const [fullName, setFullName] = useState("");
+  const [searchParams] = useSearchParams();
+
+  const [fullName, setFullName] = useState(searchParams.get("name"));
   const [yesNo, setYesNo] = useState("");
   const [status, setStatus] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const data = localStorage.getItem("status");
@@ -24,6 +30,8 @@ const Anketa = () => {
   const submitHandler = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    setIsLoading(true);
+
     try {
       const response = await fetch("https://66dae36d8677054e.mokky.dev/users", {
         method: "POST",
@@ -43,21 +51,27 @@ const Anketa = () => {
         setFullName("");
         setYesNo("");
         setStatus(true);
+        setIsLoading(false);
       } else {
         alert("Произошла ошибка при отправке данных.");
+        setIsLoading(false);
       }
     } catch (error) {
       console.error("Ошибка:", error);
       alert("Произошла ошибка при отправке данных.");
+      setIsLoading(false);
     }
   };
 
   return (
     <form className="mx-auto w-full" onSubmit={submitHandler}>
       <div className="mb-10 flex flex-col gap-2">
-        <label htmlFor="fullName" className="text-3xl mx-auto">
+        <AnimatedText
+          delay={0.2}
+          className="mb-5 text-center text-5xl font-semibold"
+        >
           Уважаемый (ая)
-        </label>
+        </AnimatedText>
         {/* <input
           type="text"
           id="fullName"
@@ -69,14 +83,16 @@ const Anketa = () => {
           disabled={status}
         /> */}
 
-        <h1 className="text-6xl mx-auto mt-3 font-['Open_Sans']">Rabiya</h1>
+        <AnimatedText delay={0.2} className="mx-auto mt-3 font-sans text-4xl">
+          {fullName}
+        </AnimatedText>
       </div>
 
       <div>
-        <p className="mb-3 text-3xl">
+        <p className="mb-6 text-3xl font-semibold">
           Сможете ли присутствовать на нашем торжестве?
         </p>
-        <div className="mb-4">
+        <div className="mb-4 text-center">
           <input
             type="radio"
             id="yes"
@@ -93,7 +109,7 @@ const Anketa = () => {
           </label>
         </div>
 
-        <div className="mb-10">
+        <div className="mb-10 text-center">
           <input
             type="radio"
             id="no"
@@ -123,8 +139,9 @@ const Anketa = () => {
           <button
             type="submit"
             className="rounded-3xl border bg-[#bfd5ec] px-10 py-4 text-3xl font-bold"
+            disabled={isLoading}
           >
-            Отправить
+            {isLoading ? <Spinner /> : "Отправить"}
           </button>
         )}
       </div>

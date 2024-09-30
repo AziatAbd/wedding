@@ -3,7 +3,7 @@ import videoSource from "../../assets/Green White Minimalist Wedding Invitation 
 const BackgroundVideo = () => {
   return (
     <img
-      className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+      className="absolute left-0 top-0 -z-10 h-full w-full object-cover"
       src={videoSource}
     />
   );

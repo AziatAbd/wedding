@@ -44,11 +44,10 @@ const Timer = () => {
   return (
     <div className="mt-8 flex flex-col items-center justify-center">
       <h1 className="text-5xl font-bold">Разделите с нами</h1>
-      <h2 className="mb-4 text-4xl italic text-gray-400">
+      <h2 className="mb-4 text-4xl font-semibold italic text-gray-400">
         <span className="text-red-600">любовь</span> через...
       </h2>
 
-      {/* Таймер */}
       <div className="flex justify-center space-x-8">
         {Object.keys(timeLeft).length > 0 ? (
           <>

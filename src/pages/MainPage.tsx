@@ -12,7 +12,7 @@ const MainPage = () => {
     <div className="relative">
       <BackgroundVideo /> {/* Вставляем видео на задний план */}
       <Header />
-      <div className="mb-20 px-3 relative z-10">
+      <div className="relative z-10 px-3 pb-20">
         <Happines />
         <Dear />
         <Map />
