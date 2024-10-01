@@ -33,7 +33,7 @@ const Anketa = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch("https://66dae36d8677054e.mokky.dev/users", {
+      const response = await fetch("https://66dae36d8677054e.mokky.dev/second-users", {
         method: "POST",
         body: JSON.stringify({
           fullName,
