@@ -33,16 +33,19 @@ const Anketa = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch("https://66dae36d8677054e.mokky.dev/second-users", {
-        method: "POST",
-        body: JSON.stringify({
-          fullName,
-          willAttend: yesNo,
-        }),
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        "https://api.sheetbest.com/api/sheets/5f5c107f-253b-459b-b38f-6d1dd77055f5",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            fullName,
+            willAttend: yesNo,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
         },
-      });
+      );
 
       localStorage.setItem("status", JSON.stringify(true));
 
