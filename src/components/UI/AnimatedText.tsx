@@ -8,11 +8,15 @@ type Props = {
   className: string;
 };
 
-const AnimatedText = ({ children, delay = 0, className = "" }: Props) => {
+const AnimatedText = ({
+  children,
+  delay = 0,
+  className = "",
+  ...props
+}: Props) => {
   const { ref, inView } = useInView({
-    threshold: 0.2, 
+    threshold: 0.2,
   });
-
 
   return (
     <motion.p
@@ -21,13 +25,11 @@ const AnimatedText = ({ children, delay = 0, className = "" }: Props) => {
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 1, delay, ease: "easeOut" }}
       className={className}
+      {...props}
     >
       {children}
     </motion.p>
   );
 };
-
-
-
 
 export default AnimatedText;

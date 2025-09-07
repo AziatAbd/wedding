@@ -73,7 +73,7 @@ const Anketa = () => {
           delay={0.2}
           className="mb-5 text-center text-5xl font-semibold"
         >
-          Уважаемый (ая)
+          Урматтуу
         </AnimatedText>
         {/* <input
           type="text"
@@ -92,7 +92,7 @@ const Anketa = () => {
       </div>
 
       <div>
-        <p className="mb-6 text-3xl font-semibold">
+        <p className="mb-6 text-center text-3xl font-semibold">
           Сможете ли присутствовать на нашем торжестве?
         </p>
         <div className="mb-4 text-center">

@@ -6,12 +6,12 @@ import heart from "../assets/heart.svg";
 import soundIcon from "../assets/sound.png";
 import mot from "../assets/MOT.mp3";
 import useSound from "use-sound";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Dear = () => {
   const [play, { pause }] = useSound(mot);
 
-  const [isPlay, setIsPlay] = useState(false);
+  const [isPlay, setIsPlay] = useState(true);
 
   const handlePlay = () => {
     play();
@@ -23,15 +23,18 @@ const Dear = () => {
     setIsPlay(false);
   };
 
+  useEffect(() => {
+    play();
+  }, [play]);
+
   return (
     <div>
       <AnimatedText
         delay={0.2}
         className="mx-auto mb-4 text-center text-5xl font-semibold"
       >
-        Дорогие и любимые!
+        Урматтуу жана сүйүктүү!
       </AnimatedText>
-
       <div
         onClick={isPlay ? handleStop : handlePlay}
         className="relative mx-auto mb-4 flex w-fit cursor-pointer flex-col items-center"
@@ -41,17 +44,18 @@ const Dear = () => {
         ) : null}
         <img src={soundIcon} alt="icon" className="w-14" />
         <span className="text-center">
-          Если Вас отвлекает музыка, ее можно выключить
+          Эгер музыка сизди алаксытса, аны өчүрүп койсоңуз болот
         </span>
       </div>
-
-      <AnimatedText delay={0.4} className="text-center text-3xl">
-        Один день в этом году будет для нас особенным, и мы хотим провести его в
-        кругу близких и друзей. С большим удовольствием приглашаем вас на
-        знаменательный праздник - нашу свадьбу!
+      <AnimatedText delay={0.4} className="text-center text-3xl leading-[40px]">
+        Урматтуу коноктор!
+        <br /> Сиздерди жүрөгүбүздүн кубанычы, нурлуу кызыбыз Элизанын ак
+        <br /> жолдуу кыз узатуу тоюна чакырабыз.
+        <br /> Төрүбүздү корктондуруп, ак дасторкондун кутун ачып, биздин
+        <br />
+        кубанычыбызга күбө болуп кетсениздер, биз үчүн чон сыймык!
       </AnimatedText>
-
-      <div className="relative mt-8 flex flex-col items-center">
+      <div className="relative mx-auto mt-8 flex w-fit flex-col items-center">
         <AnimatedText delay={0.6} className="mb-4 text-4xl font-bold">
           Октябрь
         </AnimatedText>
@@ -70,15 +74,15 @@ const Dear = () => {
           <div>ВС</div>
 
           <div></div>
-          <div>1</div>
+          <div></div>
+          <div className="text-lg">1</div>
           <div>2</div>
           <div>3</div>
           <div>4</div>
           <div>5</div>
-          <div>6</div>
 
-          {Array.from({ length: 25 }, (_, i) => {
-            const day = i + 7;
+          {Array.from({ length: 26 }, (_, i) => {
+            const day = i + 6;
             return (
               <motion.div
                 key={day}
@@ -87,7 +91,7 @@ const Dear = () => {
                 transition={{ duration: 0.3, delay: 0.9 + i * 0.03 }}
                 className="relative"
               >
-                {day === 24 ? (
+                {day === 1 ? (
                   <>
                     <div className="relative flex items-center justify-center">
                       <span>{day}</span>
@@ -108,10 +112,9 @@ const Dear = () => {
         <img
           src={heart}
           alt="heart"
-          className="pulse-animation absolute bottom-7 h-10 w-10"
+          className="pulse-animation absolute left-[69px] top-[90px] h-10 w-10"
         />
       </div>
-
       <AnimatedImage
         src={iskra}
         alt="Искра"

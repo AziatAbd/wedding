@@ -11,14 +11,14 @@ const Happines = () => {
         delay={0.2}
         className="mx-auto my-10 w-3/4 text-center text-3xl font-semibold"
       >
-        Я так счастлив, просто потому, что я встретил тебя
+        Мен ушунчалык бактылуумун, анткени мен сени жолуктурдум
       </AnimatedText>
 
       <AnimatedText
         delay={0.4}
         className="mb-10 text-center text-5xl font-semibold"
       >
-        Моё счастье...
+        Менин бактым...
       </AnimatedText>
 
       <div className="flex justify-center gap-4">

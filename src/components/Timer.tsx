@@ -9,7 +9,7 @@ interface TimeLeft {
 
 const Timer = () => {
   const calculateTimeLeft = (): TimeLeft => {
-    const targetDate = new Date("2024-10-24T00:00:00"); // Целевая дата
+    const targetDate = new Date("2025-10-01T00:00:00"); // Целевая дата
     const now = new Date();
     const difference = targetDate.getTime() - now.getTime();
 
@@ -43,21 +43,20 @@ const Timer = () => {
 
   return (
     <div className="mt-8 flex flex-col items-center justify-center">
-      <h1 className="text-5xl font-bold">Разделите с нами</h1>
-      <h2 className="mb-4 text-4xl font-semibold italic text-gray-400">
-        <span className="text-red-600">любовь</span> через...
-      </h2>
+      <h1 className="text-5xl font-bold">
+        <span className="text-red-600">Сүйүүнү</span> биз менен бөлүшүңүз...
+      </h1>
 
       <div className="flex justify-center space-x-8">
         {Object.keys(timeLeft).length > 0 ? (
           <>
             <div className="flex flex-col items-center">
               <span className="text-4xl font-bold">{timeLeft.days}</span>
-              <span className="text-3xl">дней</span>
+              <span className="text-3xl">күн</span>
             </div>
             <div className="flex flex-col items-center">
               <span className="text-4xl font-bold">{timeLeft.hours}</span>
-              <span className="text-3xl">часов</span>
+              <span className="text-3xl">саат</span>
             </div>
             <div className="flex flex-col items-center">
               <span className="text-4xl font-bold">{timeLeft.minutes}</span>

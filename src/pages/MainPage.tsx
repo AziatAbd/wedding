@@ -1,5 +1,3 @@
-import Anketa from "../components/Anketa";
-import Contacts from "../components/Contacts";
 import Dear from "../components/Dear";
 import Happines from "../components/Happines";
 import Header from "../components/Header";
@@ -16,8 +14,8 @@ const MainPage = () => {
         <Happines />
         <Dear />
         <Map />
-        <Contacts />
-        <Anketa />
+        {/* <Contacts /> */}
+        {/* <Anketa /> */}
         <Timer />
       </div>
     </div>
