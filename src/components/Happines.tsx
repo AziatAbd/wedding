@@ -1,5 +1,5 @@
-import ulanJene from "../assets/ulan-jene.jpg";
-import jene from "../assets/jene.jpg";
+import ulanJene from "../assets/mira.jpg";
+import jene from "../assets/baktybek.jpg";
 import iskra from "../assets/iskra.png";
 import AnimatedText from "./UI/AnimatedText";
 import AnimatedImage from "./UI/AnimatedImage";
@@ -25,7 +25,7 @@ const Happines = () => {
         <AnimatedImage
           src={ulanJene}
           alt="Улан и Женя"
-          className="w-1/3 object-cover"
+          className="w-1/4 object-cover"
           delay={0.6}
           hoverEffect={{ scale: 1.05, rotate: 3 }}
         />
@@ -33,7 +33,7 @@ const Happines = () => {
         <AnimatedImage
           src={jene}
           alt="Женя"
-          className="w-1/2 object-cover"
+          className="w-1/3 object-cover"
           delay={0.8}
           hoverEffect={{ scale: 1.05, rotate: -3 }}
         />
