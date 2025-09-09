@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Timer from "../components/Timer";
 import Map from "../components/Venue";
 import BackgroundVideo from "../components/UI/BackgroundVideo"; // Импортируем компонент
+import Anketa from "../components/Anketa";
 
 const MainPage = () => {
   return (
@@ -15,7 +16,7 @@ const MainPage = () => {
         <Dear />
         <Map />
         {/* <Contacts /> */}
-        {/* <Anketa /> */}
+        <Anketa />
         <Timer />
       </div>
     </div>

@@ -33,7 +33,7 @@ const Dear = () => {
         delay={0.2}
         className="mx-auto mb-4 text-center text-5xl font-semibold"
       >
-        Урматтуу жана сүйүктүү!
+        Урматтуу коноктор!
       </AnimatedText>
       <div
         onClick={isPlay ? handleStop : handlePlay}
