@@ -43,9 +43,9 @@ const Timer = () => {
 
   return (
     <div className="mt-8 flex flex-col items-center justify-center">
-      <h1 className="text-5xl font-bold">
+      {/* <h1 className="text-5xl font-bold">
         <span className="text-red-600">Сүйүүнү</span> биз менен бөлүшүңүз...
-      </h1>
+      </h1> */}
 
       <div className="flex justify-center space-x-8">
         {Object.keys(timeLeft).length > 0 ? (

@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 body {
-  font-family: "Bad Script", cursive;
+  font-family: "Lobster", sans-serif;
   /* background-color: #bfd5ec; */
 }
 @keyframes pulse {

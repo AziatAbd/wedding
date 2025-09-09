@@ -1,13 +1,12 @@
 import ulanJene from "../assets/mira.jpg";
 import jene from "../assets/baktybek.jpg";
 import iskra from "../assets/iskra.png";
-import AnimatedText from "./UI/AnimatedText";
 import AnimatedImage from "./UI/AnimatedImage";
 
 const Happines = () => {
   return (
     <div>
-      <AnimatedText
+      {/* <AnimatedText
         delay={0.2}
         className="mx-auto my-10 w-3/4 text-center text-3xl font-semibold"
       >
@@ -19,7 +18,7 @@ const Happines = () => {
         className="mb-10 text-center text-5xl font-semibold"
       >
         Менин бактым...
-      </AnimatedText>
+      </AnimatedText> */}
 
       <div className="flex justify-center gap-4">
         <AnimatedImage
