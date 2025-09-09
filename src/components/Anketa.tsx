@@ -93,7 +93,7 @@ const Anketa = () => {
 
       <div>
         <p className="mb-6 text-center text-3xl font-semibold">
-          Сможете ли присутствовать на нашем торжестве?
+          Биздин майрамга катыша аласызбы?
         </p>
         <div className="mb-4 text-center">
           <input
@@ -108,7 +108,7 @@ const Anketa = () => {
             className="h-5 w-5"
           />
           <label htmlFor="yes" className="ml-3 text-3xl">
-            Я с удовольствием приду
+            Мен кубаныч менен келем
           </label>
         </div>
 
@@ -125,7 +125,7 @@ const Anketa = () => {
             className="h-5 w-5"
           />
           <label htmlFor="no" className="ml-3 text-3xl">
-            К сожалению, не смогу присутствовать
+            Тилекке каршы, мен катыша албайм
           </label>
         </div>
       </div>
