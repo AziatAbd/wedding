@@ -34,7 +34,7 @@ const Anketa = () => {
 
     try {
       const response = await fetch(
-        "https://api.sheetbest.com/api/sheets/5f5c107f-253b-459b-b38f-6d1dd77055f5",
+        "https://api.sheetbest.com/sheets/9b3ba5f5-acb7-4f12-b60d-e4b02f4b4481",
         {
           method: "POST",
           body: JSON.stringify({
