@@ -27,13 +27,13 @@ const Login = () => {
         onSubmit={handleSubmit}
       >
         <h1 className="mb-4 text-4xl font-semibold text-gray-800">
-          Чтобы открыть приглашение, напишите имя и нажмите на кнопку
+          Чакырууну ачуу үчүн, атын жазып, баскычты басыңыз
         </h1>
 
         <input
           type="text"
           id="fullName"
-          placeholder="Ваши ФИО"
+          placeholder="Аты-жөнүңүз"
           required
           className="mb-10 w-full rounded-xl border border-[#bfd5ec] p-3 font-sans text-2xl font-semibold outline-[#bfd5ec]"
           onChange={handleChange}
@@ -44,7 +44,7 @@ const Login = () => {
           className="rounded-3xl border bg-[#bfd5ec] px-10 py-4 text-3xl font-semibold"
           type="submit"
         >
-          Открыть
+          Ачуу
         </button>
       </form>
     </div>
