@@ -29,12 +29,6 @@ const Dear = () => {
 
   return (
     <div>
-      <AnimatedText
-        delay={0.2}
-        className="mx-auto mb-4 text-center text-5xl font-semibold"
-      >
-        Урматтуу коноктор!
-      </AnimatedText>
       <div
         onClick={isPlay ? handleStop : handlePlay}
         className="relative mx-auto mb-4 flex w-fit cursor-pointer flex-col items-center"
