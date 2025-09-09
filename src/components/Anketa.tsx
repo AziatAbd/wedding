@@ -50,18 +50,17 @@ const Anketa = () => {
       localStorage.setItem("status", JSON.stringify(true));
 
       if (response.ok) {
-        alert("Данные успешно отправлены!");
+        alert("Маалыматтар ийгиликтүү жөнөтүлдү!");
         setFullName("");
         setYesNo("");
         setStatus(true);
         setIsLoading(false);
       } else {
-        alert("Произошла ошибка при отправке данных.");
+        alert("Маалыматтарды жөнөтүүдө ката кетти.");
         setIsLoading(false);
       }
     } catch (error) {
-      console.error("Ошибка:", error);
-      alert("Произошла ошибка при отправке данных.");
+      alert("Маалыматтарды жөнөтүүдө ката кетти.");
       setIsLoading(false);
     }
   };
@@ -136,7 +135,7 @@ const Anketa = () => {
             className="rounded-3xl border bg-[#bfefd4] px-10 py-4 text-3xl font-bold"
             disabled
           >
-            Отправлено
+            Жиберилди
           </button>
         ) : (
           <button
@@ -144,7 +143,7 @@ const Anketa = () => {
             className="rounded-3xl border bg-[#bfd5ec] px-10 py-4 text-3xl font-bold"
             disabled={isLoading}
           >
-            {isLoading ? <Spinner /> : "Отправить"}
+            {isLoading ? <Spinner /> : "Жөнөтүү"}
           </button>
         )}
       </div>
